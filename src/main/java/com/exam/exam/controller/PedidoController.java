@@ -29,7 +29,7 @@ public class PedidoController {
     @Autowired
     private PedidoService pedidoService;
 
-    @GetMapping("/all")
+    @GetMapping("/table")
     public String listarPed(Model model) {
         model.addAttribute("pedidos", pedidoService.readAll());
         return "/Ped/listarPed";
@@ -39,7 +39,7 @@ public class PedidoController {
     public String savePed(@Valid @ModelAttribute Pedido ped, BindingResult result, Model model, RedirectAttributes attributes) {
         pedidoService.create(ped);
         //model.addAttribute("pedidos", pedidoService.readAll());
-        return "redirect:/ped/all";
+        return "redirect:/ped/table";
     }
 
     @GetMapping("/form")
@@ -52,7 +52,7 @@ public class PedidoController {
     @GetMapping("/del/{id}")
     public String deletePed(Model model, @PathVariable("id") Integer idped) {
         pedidoService.delete(idped);
-        return "redirect:/ped/all";
+        return "redirect:/ped/table";
     }//PUT,PATCH,GET;DELETE,POST
 
     @GetMapping("/edit/{id}")

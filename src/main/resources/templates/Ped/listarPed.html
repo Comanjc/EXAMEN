@@ -10,19 +10,20 @@
     </head>
     <body>
         <div class="container" layout:fragment="page-content">    
-            <div> <h2 style="margin-left: 470px; margin-top: 10px">PEDIDOS</h2> 
+            <div> <h2 class="text-center text-danger mt-4 mb-3">LISTA PEDIDOS</h2> 
             </div>
             
-            <table style="margin-left: 120px; width: 80%" class="table">
-                <thead class="text-success">
+            <table class="table">
+                <thead class="table-dark">
                     <tr>                        
                         <th scope="col">ID</th>
-                        <th scope="col">CLIENTE</th>
-                        <th scope="col">FECHA DEL PEDIDO</th>
-                        <th scope="col">REPARTO</th>
-                        <th scope="col">PRODUCTO</th>
-                        <th scope="col">CANTIDAD</th>
-                        <th scope="col">PRECIO $</th>
+                        <th scope="col">Cliente</th>
+                        <th scope="col">Fecha_pedido</th>
+                        <th scope="col">Reparto</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Cantidad</th>
+                        <th scope="col">Precio</th>
+                        <th scope="col">OPC</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -42,9 +43,9 @@
                 </tbody>
             </table>
             
-            <hr>
-            <a th:href="@{/ped/form}" style="margin-left: 480px" class="btn btn-success">Agregar pedido</a>
-            <hr>
+           
+            <a th:href="@{/ped/form}" style="margin-left: 36rem" class="btn btn-danger mt-3">Agregar pedido</a>
+            
         </div>
 
     </body>
